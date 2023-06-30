@@ -30,3 +30,4 @@ app.use(errorHandler)//este de ultimo porque no tiene next() en la logica
 app.listen(port,()=>{
   console.log('mi port ' + port)
 })
+module.export=app
