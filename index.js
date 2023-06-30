@@ -15,7 +15,8 @@ const options ={
     }
   }
 }
-app.use(cors(options));//habilitar cualquier dominio
+//app.use(cors(options));
+app.use(cors())//habilitar cualquier dominio
 app.get('/',(req,res)=>{
   res.send('hola mi server en express')
 })
