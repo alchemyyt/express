@@ -3,10 +3,10 @@ const routerApi = require('./routes');
 const {logErrors,errorHandler,boomErrorHandler}=require('./middlewares/errorHandler');
 const cors = require('cors');
 const app = express();
-const port = process.env.PORT||9000;
+const port = process.env.PORT||3000;
 app.use(express.json());//esta es una palabra reservada de json para que el servidor reciva json del cliente
 const whitelist=['http://localhost:8080','https://myapp.co']
-const options ={
+/*const options ={
   origin:(origin,callback)=>{
     if (whitelist.includes(origin)) {//si esta incluido el origen en la whitelist
       callback(null,true)//ejecuto un callback que no hay error y el acceso esta permitido
@@ -14,7 +14,7 @@ const options ={
       callback(new Error('no permitido'))
     }
   }
-}
+}*/
 //app.use(cors(options));
 app.use(cors())//habilitar cualquier dominio
 app.get('/',(req,res)=>{
