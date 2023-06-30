@@ -3,7 +3,7 @@ const routerApi = require('./routes');
 const {logErrors,errorHandler,boomErrorHandler}=require('./middlewares/errorHandler');
 const cors = require('cors');
 const app = express();
-const port = process.env.PORT||3000;
+const port = process.env.PORT||9000;
 app.use(express.json());//esta es una palabra reservada de json para que el servidor reciva json del cliente
 const whitelist=['http://localhost:8080','https://myapp.co']
 const options ={
